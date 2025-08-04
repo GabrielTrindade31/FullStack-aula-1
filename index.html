@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head></head>
+    <meta charset="UTF-8">
+    <title>Seu Nome | Desenvolvedor Full Stack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --bg: #f7f7f7;
+            --card: #fff;
+            --text: #222;
+            --accent: #7c3aed;
+            --accent-light: #ede9fe;
+            --border: #e5e7eb;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark {
+            --bg: #18181b;
+            --card: #23232a;
+            --text: #f3f3f3;
+            --accent: #a78bfa;
+            --accent-light: #312e81;
+            --border: #27272a;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        header {
+            text-align: center;
+            padding: 32px 0 16px 0;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 8px 0;
+        }
+        #nome {
+            color: var(--accent);
+        }
+        header p {
+            margin: 0 0 16px 0;
+            color: #666;
+        }
+        nav {
+            margin-top: 12px;
+        }
+        nav a, nav button {
+            display: inline-block;
+            margin: 0 8px;
+            padding: 8px 16px;
+            border: none;
+            background: none;
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        nav a:hover, nav button:hover {
+            background: var(--accent-light);
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 8px 0 rgba(60, 60, 60, 0.04);
+        }
+        section h2 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .projeto-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 18px;
+            box-shadow: 0 1px 4px 0 rgba(60, 60, 60, 0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .projeto-card h3 {
+            margin: 0 0 8px 0;
+        }
+        .projeto-card a {
+            margin-top: auto;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .projeto-card a:hover {
+            text-decoration: underline;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            background: var(--bg);
+            color: var(--text);
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: #5b21b6;
+        }
+        .sucesso {
+            margin-top: 12px;
+            background: #d1fae5;
+            color: #065f46;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            padding: 24px 0 0 0;
+            color: #888;
+            font-size: 1rem;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 8px;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                Olá, eu sou <span id="nome">Seu Nome</span> 👋
+            </h1>
+            <p>Desenvolvedor Full Stack | Apaixonado por tecnologia</p>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+                <button id="toggle-theme" aria-label="Alternar tema">🌙</button>
+            </nav>
+        </header>
+        <main>
+            <section id="sobre" class="card">
+                <h2>Sobre mim</h2>
+                <p>
+                    Sou um desenvolvedor apaixonado por criar soluções inovadoras e experiências incríveis na web. Gosto de aprender novas tecnologias e compartilhar conhecimento.
+                </p>
+                <ul>
+                    <li>💻 HTML, CSS, JavaScript, TypeScript</li>
+                    <li>⚡ Node.js, React, Docker</li>
+                    <li>🎨 UI/UX Design</li>
+                </ul>
+            </section>
+            <section id="projetos">
+                <h2>Projetos</h2>
+                <div class="projetos-grid">
+                    <div class="projeto-card card">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição breve do projeto 1.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Ver mais</a>
+                    </div>
+                    <div class="projeto-card card">
+                        <h3>Projeto 2</h3>
+                        <p>Descrição breve do projeto 2.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Ver mais</a>
+                    </div>
+                    <div class="projeto-card card">
+                        <h3>Projeto 3</h3>
+                        <p>Descrição breve do projeto 3.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Ver mais</a>
+                    </div>
+                </div>
+            </section>
+            <section id="contato" class="card">
+                <h2>Contato</h2>
+                <form id="contato-form">
+                    <input type="text" placeholder="Seu nome" required />
+                    <input type="email" placeholder="Seu email" required />
+                    <textarea placeholder="Sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div id="mensagem-sucesso" class="sucesso" style="display:none;">
+                    Mensagem enviada! Obrigado pelo contato.
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Seu Nome. Feito com 💜</p>
+        </footer>
+    </div>
+    <script>
+        // Tema escuro/claro
+        const btn = document.getElementById('toggle-theme');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+
+        // Mensagem de sucesso no formulário
+        const form = document.getElementById('contato-form');
+        const sucesso = document.getElementById('mensagem-sucesso');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            sucesso.style.display = 'block';
+            setTimeout(() => {
+                sucesso.style.display = 'none';
+            }, 3000);
+            form.reset();
+        });
+    </script>
+</body>
+</html>
